@@ -1,23 +1,30 @@
-// Navigation Scroll Effect
-const navbar = document.querySelector('.navbar');
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+let lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > 100) {
+        navbar.classList.remove('navbar-transparent');
+        navbar.classList.add('navbar-solid');
     } else {
-        navbar.classList.remove('scrolled');
+        navbar.classList.add('navbar-transparent');
+        navbar.classList.remove('navbar-solid');
     }
+
+    lastScrollTop = scrollTop;
 });
 
-// Mobile Menu Toggle
-mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    mobileMenuBtn.classList.toggle('active');
+// Mobile menu toggle
+const mobileMenuButton = document.querySelector('.md\\:hidden');
+const mobileMenu = document.querySelector('.md\\:flex');
+
+mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
 });
 
-// Smooth Scrolling for Navigation Links
+// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -28,35 +35,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
             // Close mobile menu if open
-            navLinks.classList.remove('active');
-            mobileMenuBtn.classList.remove('active');
+            mobileMenu.classList.add('hidden');
         }
     });
 });
 
-// Intersection Observer for Fade-in Animations
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// Observe all sections
-document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
-});
-
-// Form Submission
-const contactForm = document.getElementById('contactForm');
+// Form submission handling
+const contactForm = document.querySelector('form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -74,25 +59,42 @@ if (contactForm) {
     });
 }
 
-// Active Navigation Link
+// Add animation classes to sections when they come into view
 const sections = document.querySelectorAll('section');
-const navItems = document.querySelectorAll('.nav-links a');
+const observerOptions = {
+    threshold: 0.1
+};
 
-window.addEventListener('scroll', () => {
-    let current = '';
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= (sectionTop - sectionHeight / 3)) {
-            current = section.getAttribute('id');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('section-fade-in');
+            observer.unobserve(entry.target);
         }
     });
+}, observerOptions);
 
-    navItems.forEach(item => {
-        item.classList.remove('active');
-        if (item.getAttribute('href').slice(1) === current) {
-            item.classList.add('active');
-        }
-    });
+sections.forEach(section => {
+    observer.observe(section);
 });
+
+// Initialize Google Maps
+function initMap() {
+    // Replace with your actual coordinates
+    const location = { lat: 12.971599, lng: 77.594572 };
+    const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: location
+    });
+    const marker = new google.maps.Marker({
+        position: location,
+        map: map
+    });
+}
+
+// Load Google Maps API
+const script = document.createElement('script');
+script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
+script.defer = true;
+script.async = true;
+document.head.appendChild(script);
