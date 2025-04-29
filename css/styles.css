@@ -98,3 +98,364 @@ textarea:focus {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* Product Section Variables */
+
+:root {
+    --primary-red: #FF0000;
+    --dark-red: #CC0000;
+    --light-red: #FF3333;
+    --white: #ffffff;
+    --off-white: #f5f5f5;
+    --transition-speed: 0.3s;
+}
+
+
+/* Tab Navigation Styles */
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+#tabContainer {
+    position: relative;
+    background: var(--white);
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.1);
+}
+
+.tab-btn {
+    transition: all var(--transition-speed) ease;
+    position: relative;
+    font-weight: 500;
+    color: var(--primary-red);
+    opacity: 0.7;
+}
+
+.tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary-red);
+    transform: scaleX(0);
+    transition: transform var(--transition-speed) ease;
+}
+
+.tab-btn:hover {
+    opacity: 1;
+}
+
+.tab-btn:hover::after {
+    transform: scaleX(0.5);
+}
+
+.tab-btn.active {
+    opacity: 1;
+}
+
+.tab-btn.active::after {
+    transform: scaleX(1);
+}
+
+
+/* Applications Menu Styles */
+
+.applications-toggle button {
+    color: var(--primary-red);
+    font-weight: 500;
+    transition: all var(--transition-speed) ease;
+}
+
+.applications-toggle button:hover {
+    color: var(--dark-red);
+    transform: translateX(5px);
+}
+
+.applications-menu {
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-speed) ease;
+    background: var(--white);
+    border: 1px solid rgba(255, 0, 0, 0.1);
+}
+
+.applications-menu.show {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.app-option {
+    transition: all var(--transition-speed) ease;
+    border-left: 3px solid transparent;
+    color: var(--primary-red);
+}
+
+.app-option:hover {
+    border-left-color: var(--primary-red);
+    background-color: rgba(255, 0, 0, 0.05);
+    padding-left: 1.5rem;
+}
+
+
+/* Image Area Styles */
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
+    aspect-ratio: 16/9;
+}
+
+.image-container img {
+    transition: transform var(--transition-speed) ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+.image-title {
+    background: linear-gradient(transparent, rgba(255, 0, 0, 0.9));
+    transition: all var(--transition-speed) ease;
+    padding: 2rem 1rem 1rem;
+}
+
+
+/* Products Container */
+
+.products-container {
+    width: 100%;
+    height: 600px;
+    /* Match application image height */
+    overflow-y: auto;
+    padding-right: 1rem;
+    /* Space for scrollbar */
+    /* Customize scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: #FF0000 #f3f4f6;
+}
+
+
+/* Webkit scrollbar styles */
+
+.products-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.products-container::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 10px;
+}
+
+.products-container::-webkit-scrollbar-thumb {
+    background-color: #FF0000;
+    border-radius: 10px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1rem 0;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.product-card {
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card h4 {
+    color: #1a1a1a;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    padding: 1rem 1rem 0.5rem;
+}
+
+.product-card p {
+    color: #666;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.view-product-btn {
+    display: inline-block;
+    width: calc(100% - 2rem);
+    margin: 0 1rem 1rem;
+    padding: 0.75rem 1rem;
+    background-color: #FF0000;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease;
+}
+
+.view-product-btn:hover {
+    background-color: #cc0000;
+}
+
+
+/* Animations */
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 1024px) {
+    .application-image-container {
+        height: 500px;
+    }
+    .products-container {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .application-image-container {
+        height: 400px;
+        margin-bottom: 1rem;
+    }
+    .products-container {
+        height: 500px;
+        /* Keep good scrollable height on mobile */
+    }
+    .products-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Application Image Container */
+
+.application-image-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    /* Fixed height */
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background-color: #f3f4f6;
+    margin-bottom: 2rem;
+}
+
+.application-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.application-image-container:hover img {
+    transform: scale(1.05);
+}
+
+.application-image-container .image-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 4rem 2rem 2rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+.application-image-container .image-title h3 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+/* Product Modal Styles */
+
+#productModal {
+    transition: opacity 0.3s ease;
+}
+
+#productModal:not(.hidden) {
+    display: flex !important;
+}
+
+#productModal.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#productModal .bg-white {
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+#productModal:not(.hidden) .bg-white {
+    transform: scale(1);
+}
+
+
+/* Close button hover effect */
+
+#productModal button {
+    transition: color 0.3s ease;
+}
+
+#productModal button:hover {
+    color: #FF0000;
+    transform: scale(1.1);
+}

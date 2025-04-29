@@ -19,9 +19,28 @@ window.addEventListener('scroll', () => {
 // Mobile menu toggle
 const mobileMenuButton = document.getElementById('mobileMenuButton');
 const mobileMenu = document.getElementById('mobileMenu');
+const mobileProductsButton = document.getElementById('mobileProductsButton');
+const mobileProductsMenu = document.getElementById('mobileProductsMenu');
 
 mobileMenuButton.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
+});
+
+mobileProductsButton.addEventListener('click', () => {
+    mobileProductsMenu.classList.toggle('hidden');
+    // Rotate the arrow icon
+    const arrow = mobileProductsButton.querySelector('svg');
+    arrow.classList.toggle('rotate-180');
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (event) => {
+    if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
+        mobileProductsMenu.classList.add('hidden');
+        const arrow = mobileProductsButton.querySelector('svg');
+        arrow.classList.remove('rotate-180');
+    }
 });
 
 // Smooth scroll for anchor links

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindustan Hardware - Tile Adhesive & Water Proofing</title>
+    <meta name="title" content="Hindustan Hardware - Tile Adhesive & Water Proofing">
+    <meta name="description" content="Hindustan Hardware provides quality industrial supplies, construction tools, hardware fittings, and more.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hindustanhardware.in/">
+    <meta property="og:title" content="Hindustan Hardware - Tile Adhesive & Water Proofing">
+    <meta property="og:description" content="Hindustan Hardware provides quality industrial supplies, construction tools, hardware fittings, and more.">
+    <meta property="og:image" content="https://hindustanhardware.in/assests/LOGO.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hindustanhardware.in/">
+    <meta property="twitter:title" content="Hindustan Hardware - Tile Adhesive & Water Proofing">
+    <meta property="twitter:description" content="Hindustan Hardware provides quality industrial supplies, construction tools, hardware fittings, and more.">
+    <meta property="twitter:image" content="https://hindustanhardware.in/assests/LOGO.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="assests/LOGO.png">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar" style="background-color: #FF0000;">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="assests/LOGO.png" alt="Hindustan Hardware Logo" class="h-12">
+            </div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html#home" class="text-white hover:text-gray-200 transition">Home</a>
+                <div class="relative group">
+                    <a href="index.html#services" class="text-white hover:text-gray-200 transition flex items-center">
+                        Products    
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <div class="py-2">
+                            <a href="pipefitting.html" class="block px-4 py-2 text-gray-800 hover:bg-red-100 hover:text-[#FF0000] transition">Pipefitting</a>
+                            <a href="Tile_adhesive&Water_Proofing.html" class="block px-4 py-2 text-gray-800 hover:bg-red-100 hover:text-[#FF0000] transition">Tile Adhesive & Water Proofing</a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-red-100 hover:text-[#FF0000] transition">Hardware Fittings</a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-red-100 hover:text-[#FF0000] transition">General Products</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="index.html#companies" class="text-white hover:text-gray-200 transition">Our Companies</a>
+                <a href="index.html#about" class="text-white hover:text-gray-200 transition">About Us</a>
+                <a href="index.html#contact" class="text-white hover:text-gray-200 transition">Contact</a>
+            </div>
+            <!-- Mobile Menu (hidden by default) -->
+            <div id="mobileMenu" class="md:hidden hidden flex-col space-y-4 bg-[#FF0000] px-4 py-4 absolute top-full left-0 w-full z-40">
+                <a href="index.html#home" class="text-white block">Home</a>
+                <div class="relative">
+                    <button class="text-white w-full text-left flex items-center justify-between" id="mobileProductsButton">
+                        Products
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="mobileProductsMenu" class="hidden pl-4 mt-2 space-y-2">
+                        <a href="pipefitting.html" class="block text-white hover:text-gray-200 transition">Pipefitting</a>
+                        <a href="Tile_adhesive&Water_Proofing.html" class="block text-white hover:text-gray-200 transition">Tile Adhesive & Water Proofing</a>
+                        <a href="#" class="block text-white hover:text-gray-200 transition">Hardware Fittings</a>
+                        <a href="#" class="block text-white hover:text-gray-200 transition">General Products</a>
+                    </div>
+                </div>
+                <a href="index.html#companies" class="text-white block">Our Companies</a>
+                <a href="index.html#about" class="text-white block">About Us</a>
+                <a href="index.html#contact" class="text-white block">Contact</a>
+            </div>
+            <button id="mobileMenuButton" class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+    <br>
+    <!-- Products Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-[#FF0000] text-4xl md:text-5xl font-bold text-center mb-6">APPLICATION AREAS</h1>
+            <p class="text-center text-gray-600 mb-12 max-w-4xl mx-auto">
+                Explore product application areas on how our product range redefines traditional applications and introduce novel solutions that inspire progress and the future of your project.
+            </p>
+
+            <!-- Tab Navigation -->
+            <div class="relative">
+                <div class="flex overflow-x-auto hide-scrollbar border-b border-gray-200" id="tabContainer">
+                    <button class="tab-btn active min-w-fit px-8 py-4 text-gray-800 border-b-4 border-transparent whitespace-nowrap" data-tab="walling">
+                        WALLING SOLUTIONS
+                    </button>
+                    <button class="tab-btn min-w-fit px-8 py-4 text-gray-800 border-b-4 border-transparent whitespace-nowrap" data-tab="waterproofing">
+                        WATERPROOFING SYSTEMS
+                    </button>
+                    <button class="tab-btn min-w-fit px-8 py-4 text-gray-800 border-b-4 border-transparent whitespace-nowrap" data-tab="tile">
+                        TILE AND STONE INSTALLATION SOLUTIONS
+                    </button>
+                    <button class="tab-btn min-w-fit px-8 py-4 text-gray-800 border-b-4 border-transparent whitespace-nowrap" data-tab="structural">
+                        STRUCTURAL REPAIRS, SEALANTS & GROUTS
+                    </button>
+                    <button class="tab-btn min-w-fit px-8 py-4 text-gray-800 border-b-4 border-transparent whitespace-nowrap" data-tab="protective">
+                        PROTECTIVE COATINGS
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="mt-8">
+                <div class="container mx-auto px-4">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Left side - Application Image -->
+                        <div class="application-image-container bg-gray-100 rounded-lg overflow-hidden relative">
+                            <img id="applicationImage" src="assests/walling-solutions.jpg" alt="Application Image" class="w-full h-full object-cover">
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                                <h3 id="applicationTitle" class="text-white text-2xl font-bold text-center">WALLING SOLUTIONS</h3>
+                            </div>
+                        </div>
+
+                        <!-- Right side - Products Grid -->
+                        <div class="products-container">
+                            <div class="products-grid grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <!-- Products will be dynamically loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Make sure these scripts are loaded in the correct order -->
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 hidden">
+        <div class="bg-white rounded-lg shadow-lg max-w-md w-full mx-4 p-6 relative animate-fadeIn">
+            <button onclick="closeProductModal()" class="absolute top-2 right-4 text-gray-500 hover:text-[#FF0000] text-2xl font-bold">&times;</button>
+            <img id="modalProductImg" src="" alt="Product Image" class="w-full h-96 object-cover rounded mb-4">
+            <h3 id="modalProductName" class="text-2xl font-bold mb-2 text-center text-[#FF0000]"></h3>
+            <p id="modalProductDetails" class="text-gray-700 text-center"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#FF0000] text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <img src="assests/LOGO.png" alt="Hindustan Hardware Logo" class="h-12 mb-4">
+                    <p class="text-gray-200">Your Trusted Partner in Quality Hardware</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-200 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-200 hover:text-white transition">About Us</a></li>
+                        <li><a href="#services" class="text-gray-200 hover:text-white transition">Services</a></li>
+                        <li><a href="#companies" class="text-gray-200 hover:text-white transition">Our Companies</a></li>
+                        <li><a href="#contact" class="text-gray-200 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <p class="text-gray-200 mb-2">123 Hardware Street</p>
+                    <p class="text-gray-200 mb-2">Vadodara, Gujarat, India</p>
+                    <p class="text-gray-200 mb-2">Phone: +91 9725434543</p>
+                    <p class="text-gray-200">Email: ccpatel7190@gmail.com</p>
+                </div>
+            </div>
+            <div class="border-t border-red-700 mt-8 pt-8 text-center text-gray-200">
+                <p>&copy; 2024 Hindustan Hardware. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

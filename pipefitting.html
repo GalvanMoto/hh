@@ -4,29 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hindustan Hardware - Your Trusted Partner in Quality Hardware</title>
-    <meta name="title" content="Hindustan Hardware - Your Trusted Partner in Quality Hardware">
+    <title>Hindustan Hardware - Pipefitting Products</title>
+    <meta name="title" content="Hindustan Hardware - Pipefitting Products">
     <meta name="description" content="Hindustan Hardware provides quality industrial supplies, construction tools, hardware fittings, and more.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:url" content="https://hindustanhardware.in/">
     <meta property="og:title" content="Hindustan Hardware - Your Trusted Partner in Quality Hardware">
     <meta property="og:description" content="Hindustan Hardware provides quality industrial supplies, construction tools, hardware fittings, and more.">
-    <meta property="og:image" content="https://yourdomain.com/assests/hindustan-hardware-logo.png">
+    <meta property="og:image" content="https://hindustanhardware.in/assests/LOGO.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://yourdomain.com/">
+    <meta property="twitter:url" content="https://hindustanhardware.in/">
     <meta property="twitter:title" content="Hindustan Hardware - Your Trusted Partner in Quality Hardware">
     <meta property="twitter:description" content="Hindustan Hardware provides quality industrial supplies, construction tools, hardware fittings, and more.">
-    <meta property="twitter:image" content="https://yourdomain.com/assests/hindustan-hardware-logo.png">
+    <meta property="twitter:image" content="https://hindustanhardware.in/assests/LOGO.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="assests/hindustan-hardware-logo.png">
+    <link rel="icon" type="image/png" href="assests/LOGO.png">
     <link rel="manifest" href="manifest.json">
 </head>
 
@@ -39,16 +39,44 @@
             </div>
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-white hover:text-gray-200 transition">Home</a>
-                <a href="index.html#services" class="text-white hover:text-gray-200 transition">Products</a>
+                <a href="index.html#home" class="text-white hover:text-gray-200 transition">Home</a>
+                <div class="relative group">
+                    <a href="index.html#services" class="text-white hover:text-gray-200 transition flex items-center">
+                        Products    
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                        <div class="py-2">
+                            <a href="pipefitting.html" class="block px-4 py-2 text-gray-800 hover:bg-red-100 hover:text-[#FF0000] transition">Pipefitting</a>
+                            <a href="Tile_adhesive&Water_Proofing.html" class="block px-4 py-2 text-gray-800 hover:bg-red-100 hover:text-[#FF0000] transition">Tile Adhesive & Water Proofing</a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-red-100 hover:text-[#FF0000] transition">Hardware Fittings</a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-red-100 hover:text-[#FF0000] transition">General Products</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="index.html#companies" class="text-white hover:text-gray-200 transition">Our Companies</a>
                 <a href="index.html#about" class="text-white hover:text-gray-200 transition">About Us</a>
                 <a href="index.html#contact" class="text-white hover:text-gray-200 transition">Contact</a>
             </div>
             <!-- Mobile Menu (hidden by default) -->
             <div id="mobileMenu" class="md:hidden hidden flex-col space-y-4 bg-[#FF0000] px-4 py-4 absolute top-full left-0 w-full z-40">
-                <a href="index.html" class="text-white block">Home</a>
-                <a href="index.html#services" class="text-white block">Products</a>
+                <a href="index.html#home" class="text-white block">Home</a>
+                <div class="relative">
+                    <button class="text-white w-full text-left flex items-center justify-between" id="mobileProductsButton">
+                        Products
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="mobileProductsMenu" class="hidden pl-4 mt-2 space-y-2">
+                        <a href="pipefitting.html" class="block text-white hover:text-gray-200 transition">Pipefitting</a>
+                        <a href="Tile_adhesive&Water_Proofing.html" class="block text-white hover:text-gray-200 transition">Tile Adhesive & Water Proofing</a>
+                        <a href="#" class="block text-white hover:text-gray-200 transition">Hardware Fittings</a>
+                        <a href="#" class="block text-white hover:text-gray-200 transition">General Products</a>
+                    </div>
+                </div>
                 <a href="index.html#companies" class="text-white block">Our Companies</a>
                 <a href="index.html#about" class="text-white block">About Us</a>
                 <a href="index.html#contact" class="text-white block">Contact</a>
@@ -160,9 +188,9 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contact Info</h3>
                     <p class="text-gray-200 mb-2">123 Hardware Street</p>
-                    <p class="text-gray-200 mb-2">City, State 12345</p>
-                    <p class="text-gray-200 mb-2">Phone: (123) 456-7890</p>
-                    <p class="text-gray-200">Email: info@hindustanhardware.com</p>
+                    <p class="text-gray-200 mb-2">Vadodara, Gujarat, India</p>
+                    <p class="text-gray-200 mb-2">Phone: +91 9725434543</p>
+                    <p class="text-gray-200">Email: ccpatel7190@gmail.com</p>
                 </div>
             </div>
             <div class="border-t border-red-700 mt-8 pt-8 text-center text-gray-200">
