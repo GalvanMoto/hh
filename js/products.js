@@ -147,7 +147,7 @@ class ProductsManager {
                     <div class="p-4">
                         <h4 class="text-xl font-semibold text-gray-900 mb-2">${product.name}</h4>
                         <p class="text-gray-600 mb-4">${product.description}</p>
-                        <button class="view-product-btn bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors w-full">
+                        <button class="view-product-btn bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors w-auto">
                             View Product
                         </button>
                     </div>
